@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+  <button onclick="myFunction()">Click Me</button>
+
+  <script>
+    function myFunction() {
+      // Incorrect way to remove element: Incorrect usage of innerHTML
+      document.getElementById("myDiv").innerHTML = "";
+       // correct method is to use removeChild method
+    }
+  </script>
+</body>
+</html>
